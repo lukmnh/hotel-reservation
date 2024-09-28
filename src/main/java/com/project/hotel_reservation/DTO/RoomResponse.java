@@ -1,8 +1,9 @@
 package com.project.hotel_reservation.DTO;
 
 import java.math.BigDecimal;
-import org.apache.tomcat.util.codec.binary.Base64;
 import java.util.List;
+
+import org.apache.tomcat.util.codec.binary.Base64;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,14 +25,13 @@ public class RoomResponse {
         this.roomPrice = roomPrice;
     }
 
-    public RoomResponse(Long id, String roomType, BigDecimal roomPrice, boolean isBooked, byte[] photoBytes,
-            List<BookedRoomResponse> bookings) {
+    public RoomResponse(Long id, String roomType, BigDecimal roomPrice, boolean isBooked, byte[] photoBytes) {
         this.id = id;
         this.roomType = roomType;
         this.roomPrice = roomPrice;
         this.isBooked = isBooked;
         this.photo = photoBytes != null ? Base64.encodeBase64String(photoBytes) : null;
-        this.bookings = bookings;
+        // this.bookings = bookings;
     }
 
 }

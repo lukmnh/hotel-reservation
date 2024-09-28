@@ -1,5 +1,9 @@
 package com.project.hotel_reservation.Service;
 
-public interface iBookRoomService {
+import java.util.List;
 
+import com.project.hotel_reservation.Model.BookedRoom;
+
+public interface iBookRoomService {
+    public List<BookedRoom> getAllBookingsByRoomId(Long id);
 }
